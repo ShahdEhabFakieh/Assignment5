@@ -1,0 +1,1014 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+.navbar {
+    width: 100%;
+    background-color: white;
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    padding: 30px 0;
+}
+
+.nbar {
+    display: flex;
+    margin: auto;
+}
+
+.nbar li {
+    font-size: 17px;
+    font-weight: 500;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.nbar li a {
+    margin-right: 30px;
+    color: rgb(119, 118, 118);
+    position: relative;
+    display: block;
+    padding: 4px 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-decoration: none;
+    transition: 0.5s;
+
+    &::after {
+        position: absolute;
+        content: "";
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 3px;
+        background: brown;
+        transform: scaleX(0);
+        transform-origin: right;
+        transition: transform 0.5s;
+    }
+    &:hover {
+        color: black;
+      }
+
+    &:hover::after {
+        transform: scaleX(1);
+        transform-origin: left;
+    }
+
+}
+
+.nbar li a.active {
+    border-bottom: 3px solid brown;
+    color: black;
+}
+
+
+#HomePage h2 {
+    position: relative;
+    font-size: 30px;
+    font-weight: 700;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#HomePage h2::after {
+    content: '.';
+    width: 10px;
+    height: 10px;
+    background-color: transparent;
+    color: crimson;
+    position: absolute;
+}
+
+#HomePage {
+    background-color: whitesmoke;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#HomePage .divOne {
+    width: 600px;
+    height: 600px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    row-gap: 20px;
+    position: relative;
+}
+
+#HomePage h3 {
+    font-size: 60px;
+    font-family: 'Amatic SC', cursive;
+    margin-top: 140px;
+    margin-left: 120px;
+}
+
+.divOne p {
+    width: 450px;
+    font-size: 16px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 400;
+    margin-top: -10px;
+    margin-left: 120px;
+    color: rgb(68, 68, 68);
+    font-style: normal;
+}
+
+#HomePage button {
+    position: absolute;
+    width: 150px;
+    border-radius: 0 100px 100px 100px;
+    background-color: rgb(211, 3, 24);
+    font-size: 15px;
+    color: white;
+    margin-left: 120px;
+    margin-top: 400px;
+    margin-bottom: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 5px black;
+    padding: 15px;
+    cursor: pointer;
+
+}
+
+.divOne .play {
+    margin-left: 300px;
+    margin-bottom: 130px;
+    margin-top: 30px;
+
+}
+
+.divOne .prg {
+    margin-top: -165px;
+    margin-left: 220px;
+}
+
+.prg p {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: black;
+    transition-duration: 0.2s;
+    cursor: pointer;
+}
+
+.prg p:hover {
+    color: red;
+}
+
+#HomePage .imagehov {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 100px;
+    margin-left: 170px;
+    filter: drop-shadow(0 0 10px black);
+
+}
+
+#HomePage img:hover {
+    animation: imagehov 0.5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes imagehov {
+    0% {
+        transform: translate(1px, 1px) rotate(0deg);
+    }
+
+    10% {
+        transform: translate(-1px, -2px) rotate(-1deg);
+    }
+
+    20% {
+        transform: translate(-3px, 0px) rotate(1deg);
+    }
+
+    30% {
+        transform: translate(3px, 2px) rotate(0deg);
+    }
+
+    40% {
+        transform: translate(1px, -1px) rotate(1deg);
+    }
+
+    50% {
+        transform: translate(-1px, 2px) rotate(-1deg);
+    }
+
+    60% {
+        transform: translate(-3px, 1px) rotate(0deg);
+    }
+
+    70% {
+        transform: translate(3px, 1px) rotate(-1deg);
+    }
+
+    80% {
+        transform: translate(-1px, -1px) rotate(1deg);
+    }
+
+    90% {
+        transform: translate(1px, 2px) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(1px, -2px) rotate(-1deg);
+    }
+}
+
+#Hometwo {
+    width: 100%;
+    background-color: white;
+    /*display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;*/
+    padding: 50px;
+}
+
+.text {
+    text-align: center;
+}
+
+.chef {
+    display: flex;
+    padding: 30px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.text h4 {
+    font-size: 16px;
+    font-weight: 400;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    /* margin-left: 600px;
+    margin-top: 100px;*/
+    color: rgba(0, 0, 0, 0.589);
+
+}
+
+.text h3 {
+
+    font-size: 50px;
+    font-family: 'Amatic SC', cursive;
+    font-weight: 600;
+
+}
+
+.text h3 span {
+    color: crimson;
+}
+
+.one {
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.678);
+    width: 380px;
+    height: 520px;
+    text-align: center;
+    border-radius: 10px 10px 10px 10px;
+    transition: transform 0.5s;
+    position: relative;
+
+
+}
+
+.one:hover {
+    transform: scale(1.07);
+}
+
+.one .chef1 {
+    width: 100%;
+    height: 350px;
+    border-radius: 10px;
+
+}
+.one .wave{
+    width: 100%;
+    height: 100px;
+    position: absolute;
+    margin-top: 280px;
+    margin-left: -380px;
+}
+
+#Hometwo .one .p1 {
+    font-size: 16px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: rgba(0, 0, 0, 0.589);
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+#Hometwo h2 {
+    font-size: 20px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 600;
+    margin-top: 30px;
+    margin-bottom: 5px;
+}
+
+p {
+    font-size: 16px;
+    font-style: italic;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.589);
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.two {
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.678);
+    width: 380px;
+    height: 520px;
+    text-align: center;
+    border-radius: 10px 10px 10px 10px;
+    transition: transform 0.5s;
+    position: relative;
+}
+
+.two:hover {
+    transform: scale(1.07);
+}
+
+.two .chef2 {
+    width: 100%;
+    height: 350px;
+    border-radius: 10px;
+
+}
+.two .wave{
+    width: 100%;
+    height: 100px;
+    position: absolute;
+    margin-top: 280px;
+    margin-left: -380px;
+}
+
+#Hometwo .two .p1 {
+    font-size: 16px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: rgba(0, 0, 0, 0.589);
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.three {
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.678);
+    width: 380px;
+    height: 520px;
+    text-align: center;
+    border-radius: 10px 10px 10px 10px;
+    transition: transform 0.5s;
+    position: relative;
+}
+
+.three:hover {
+    transform: scale(1.07);
+}
+
+.three .chef3 {
+    width: 100%;
+    height: 350px;
+    border-radius: 10px;
+
+}
+.three .wave{
+    width: 100%;
+    height: 100px;
+    position: absolute;
+    margin-top: 280px;
+    margin-left: -380px;
+}
+
+#Hometwo .three .p1 {
+    font-size: 16px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: rgba(0, 0, 0, 0.589);
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.icons {
+    background-color: transparent;
+    color: #aaaaaa;
+    text-align: center;
+    padding-top: 100px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.fa-twitter {
+    color: #a5a4a4;
+    padding-left: 20px;
+}
+
+.fa-twitter:hover {
+    color: black;
+}
+
+.fa-facebook-f {
+    color: #a5a4a4;
+    padding-left: 20px;
+}
+
+.fa-facebook-f:hover {
+    color: black;
+}
+
+.fa-instagram {
+    color: #a5a4a4;
+    padding-left: 20px;
+}
+
+.fa-instagram:hover {
+    color: black;
+}
+
+.fa-linkedin {
+    color: #a5a4a4;
+    padding-left: 20px;
+}
+
+.fa-linkedin:hover {
+    color: black;
+}
+
+/* .one {
+    position: relative;
+    width: 50%;
+  }*/
+
+.overlay {
+    position: absolute;
+    top: 50px;
+    left: 100%;
+    right: 0;
+    background-color: rgba(245, 238, 238, 0.637);
+    overflow: hidden;
+    width: 0;
+    height: 120px;
+    transition: .5s ease;
+    border-radius: 5px;
+}
+
+.one:hover .overlay {
+    width: 50px;
+
+    left: 300px;
+
+    height: 120px;
+}
+
+.two:hover .overlay {
+    width: 50px;
+
+    left: 300px;
+
+    height: 120px;
+}
+
+.three:hover .overlay {
+    width: 50px;
+
+    left: 300px;
+
+    height: 120px;
+}
+
+.icons {
+    white-space: nowrap;
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    overflow: hidden;
+    top: 10px;
+    left: 15px;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+
+#ResImg {
+    background-color: whitesmoke;
+    padding: 40px;
+}
+
+.photo-container {
+    max-width: 1224px;
+    width: 90%;
+    margin: auto;
+    padding: 40px 0;
+}
+
+.photo-gallery {
+    display: flex;
+    gap: 20px;
+}
+
+.coloumn {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border: 4px solid white;
+}
+
+@media(max-width:786px) {
+    .photo-gallery {
+        flex-direction: column;
+    }
+}
+
+.photo {
+    position: relative;
+}
+
+.overlayer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.466);
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    transition: .5s ease;
+
+}
+
+.photo:hover .overlayer {
+    height: 100%;
+}
+
+.menu {
+    width: 400px;
+    text-align: center;
+    white-space: nowrap;
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    overflow: hidden;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#ResImg p {
+    margin: auto;
+    font-size: 16px;
+    background-color: transparent;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    text-align: center;
+}
+
+#ResImg h6 {
+    font-size: 25px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    color: white;
+    text-align: center;
+
+}
+
+.m1 {
+
+    transition: transform .2s;
+    margin: 0 auto;
+}
+
+.m1:hover {
+    transform: scale(1.05);
+
+}
+
+#Contact {
+    padding: 50px;
+}
+
+#Contact .reachus {
+    padding: 50px;
+}
+
+.parent {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.parent .address {
+    height: 100px;
+    width: 570px;
+    display: flex;
+    background-color: #f5f5f5;
+    align-items: center;
+    padding: 20px;
+    margin-left: 50px;
+}
+
+.parent .Call {
+    height: 100px;
+    width: 570px;
+    display: flex;
+    /*flex-wrap: wrap;
+        justify-content: flex-start;*/
+    background-color: #f5f5f5;
+    align-items: center;
+    padding: 20px;
+    margin-left: 50px;
+    margin-top: 20px;
+}
+
+.parent .email {
+    height: 100px;
+    width: 570px;
+    display: flex;
+    background-color: #f5f5f5;
+    align-items: center;
+    padding: 20px;
+    margin-left: 20px;
+
+}
+
+.parent .oh {
+    height: 100px;
+    width: 570px;
+    display: flex;
+    background-color: #f5f5f5;
+    align-items: center;
+    padding: 20px;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.words {
+    margin-left: 10px;
+}
+
+.parent h5 {
+    margin-right: 270px;
+    font-size: 25px;
+    font-weight: 700;
+    color: rgb(104, 101, 101);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.parent p {
+    margin-right: 100px;
+    font-size: 18px;
+    font-weight: 400;
+    color: black;
+    font-style: normal;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.parent .col1 {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+
+
+}
+
+.parent .col2 {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+}
+
+a {
+    color: black;
+    margin-right: 100px;
+}
+
+.form {
+    box-shadow: 0 0 30px #00000014;
+    padding: 40px;
+    margin-top: 50px;
+    height: 500px;
+}
+
+.form input[type=text] {
+    width: 560px;
+    height: 55px;
+    padding: 12px 20px;
+    margin-left: -240px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    transition: 0.2s;
+    outline: none;
+}
+
+.form input[type=text]:focus {
+    border: 2px solid brown;
+}
+
+.form input[type=email] {
+    width: 560px;
+    height: 55px;
+    padding: 12px 20px;
+    margin-right: -230px;
+    margin-left: 30px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    transition: 0.2s;
+    outline: none;
+}
+
+.form input[type=email]:focus {
+    border: 2px solid brown;
+}
+
+input[type=text1] {
+    width: 1150px;
+    height: 55px;
+    padding: 12px 20px;
+    margin-left: -10px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    transition: 0.2s;
+    outline: none;
+}
+
+.form input[type=text1]:focus {
+    border: 2px solid brown;
+}
+
+.form textarea {
+    width: 1150px;
+    height: 200px;
+    padding: 12px 20px;
+    margin-left: -10px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    font-size: 16px;
+
+    transition: 0.2s;
+    outline: none;
+}
+
+.form textarea:focus {
+    border: 2px solid brown;
+}
+
+#Contact .form .send {
+    background-color: rgb(211, 3, 24);
+    color: #fcf7f7;
+    border-color: transparent;
+    border-radius: 100px 100px 100px 100px;
+    width: 200px;
+    padding: 15px;
+    text-align: center;
+    margin-left: -50px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: 400;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#Contact .form .send:hover {
+    background-color: rgb(238, 45, 45);
+    color: #fcf7f7;
+}
+
+.foot {
+    height: 400px;
+    background-image: url('./images/textured-metal-background.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background: cover;
+    display: flex;
+    justify-content: space-between;
+    background-color: red;
+}
+
+/* .foot p{
+        transition: transform 0.2s ease-in-out;
+      }
+
+      .foot p:hover {
+        transform: translateX(20px);
+      }*/
+.foot1 {
+    width: 27%;
+    height: 200px;
+}
+
+.foot1 img {
+    width: 50px;
+    height: 50px;
+    margin-top: 50px;
+    margin-left: 50px;
+}
+
+.foot1 h2 {
+    color: white;
+    margin-left: 110px;
+    margin-top: -50px;
+    font-size: 32px;
+    font-weight: 700;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.foot1 h2::after {
+    content: '.';
+    width: 10px;
+    height: 10px;
+    background-color: transparent;
+    color: crimson;
+    position: absolute;
+}
+
+.foot1 p {
+    width: 300px;
+    color: white;
+    margin-left: 50px;
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: 400;
+    font-style: normal;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.foot1 h3 {
+    width: 300px;
+    color: white;
+    margin-left: 120px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 25px;
+    font-weight: 700;
+    font-style: normal;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.foot1 hr {
+    width: 300px;
+    margin-left: 50px;
+}
+
+.icofoot {
+    margin-top: 20px;
+    margin-bottom: 30px;
+    margin-left: 55px;
+}
+
+.icofoot i {
+    margin-right: 30px;
+}
+
+.foot2 {
+    width: 45%;
+    height: 400px;
+    padding-top: 50px;
+}
+
+.foot2 h3 {
+    width: 300px;
+    color: white;
+    margin-bottom: 8px;
+    font-size: 23px;
+    font-weight: 700;
+    font-style: normal;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.foot2 p {
+    width: 550px;
+    color: white;
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: 400;
+    font-style: normal;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+
+.foot2 input[type=email] {
+    width: 400px;
+    height: 40px;
+    padding: 12px;
+    margin-right: 10px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    transition: 0.2s;
+    outline: none;
+}
+
+.foot2 .btnfoot {
+    background-color: rgb(211, 3, 24);
+    color: white;
+    width: 120px;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px groove transparent;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    text-align: center;
+}
+
+.foot2 .btnfoot:hover {
+    background-color: rgb(238, 45, 45);
+    color: #fcf7f7;
+}
+
+.foot2 .ul a {
+    display: block;
+    padding: 5px;
+    margin: 5px;
+    background-color: transparent;
+    color: white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    transition: transform 0.4s ease-in-out;
+}
+
+.foot2 .ul a:hover {
+    background-color: rgba(255, 255, 255, 0.356);
+    transform: translateX(20px);
+}
+
+.foot2 ul {
+    columns: 2;
+    -webkit-columns: 2;
+    -moz-columns: 2;
+}
+
+.foot3 {
+    width: 25%;
+    height: 200px;
+}
+
+.foot3 h3 {
+    color: white;
+    margin-top: 50px;
+    margin-bottom: 8px;
+    font-size: 23px;
+    font-weight: 700;
+    font-style: normal;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.foot3 p {
+    width: 100%;
+    color: white;
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: 400;
+    font-style: normal;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+@media screen and(max-width: 576px) {
+    #HomePage{width: 100%}
+    #Hometwo{width: 100%}
+    #ResImg{width: 100%}
+    #Contact{width: 100%}
+    #foot{width: 100%}
+}
+@media screen and(min-width: 577px) and (max-width: 768px) {
+    #HomePage{width: 50%}
+    #Hometwo{width: 50%}
+    #ResImg{width: 50%}
+    #Contact{width: 50%}
+    #foot{width: 50%}
+}
+@media screen and(min-width: 769px) and (max-width: 992px) {
+    #HomePage{width: 33.33%}
+    #Hometwo{width: 33.33%}
+    #ResImg{width: 33.33%}
+    #Contact{width: 33.33%}
+    #foot{width: 33.33%}
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
